@@ -30,11 +30,14 @@
       var calcOffset = function(dimensionPct) {
         var w = beforeImg.width();
         var h = beforeImg.height();
+        console.log(w+ " , "+h);
+        console.log(dimensionPct*h);
         return {
           w: w+"px",
-          h: h+"px",
+          h: h - 160 +"px",
           cw: (dimensionPct*w)+"px",
           ch: (dimensionPct*h)+"px"
+          // ch: '400px'
         };
       };
 
@@ -43,6 +46,7 @@
       	  beforeImg.css("clip", "rect(0,"+offset.w+","+offset.ch+",0)");
       	}
       	else {
+          console.log('here');
           beforeImg.css("clip", "rect(0,"+offset.cw+","+offset.h+",0)");
     	}
         container.css("height", offset.h);
