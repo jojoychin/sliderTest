@@ -34,7 +34,7 @@
         console.log(dimensionPct*h);
         return {
           w: w+"px",
-          h: h - 160 +"px",
+          h: h +"px",
           cw: (dimensionPct*w)+"px",
           ch: (dimensionPct*h)+"px"
           // ch: '400px'
